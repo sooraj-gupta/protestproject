@@ -17,6 +17,7 @@ body
     --bg: #eee;
     --mainbg: #fff;
     --text: #000;
+    --texta: #0005;
     --lighttext: #444;
     --logolight: #666;
     --lightest: #888;
@@ -30,6 +31,7 @@ body.dark
     --bg: #111;
     --mainbg: black;
     --text: #fff;
+    --texta: #fff5;
     --lighttext: #eee;
     --logolight: #999;
     --lightest: #888;
@@ -53,10 +55,23 @@ body.dark
     }
 }
 
+@keyframes bob {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(50px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 *
 {
     animation: fadein 0.5s ease 0s;
-    transition: background-color 0.2s, color 0.2s;
 }
 
 body,html
@@ -69,6 +84,10 @@ body,html
     color: var(--text);
     scroll-behavior: smooth;
     overscroll-behavior-y:none;
+}
+html
+{
+    background-color: #111;
 }
 
 .nav
@@ -170,6 +189,7 @@ hr
     border-radius: 5px;
     min-height: 100vh;
     background-color: var(--mainbg);
+    z-index: 0;
 }
 
 .main .title
@@ -186,7 +206,9 @@ hr
 {
     max-width: 40%;
     flex-basis: 40%;;
-    align-self: flex-end
+    align-self: flex-end;
+    animation: bob 2s 0s infinite;
+    z-index: -1;
 }
 
 .main .title h1
@@ -299,16 +321,124 @@ hr
 .section
 {
     padding: 80px 80px;
+    z-index: 10;
 }
 .section h1
 {
-    color: var(--lighttext);
+    color: var(--text);
     font-size: calc( 4vw - 20px );;
+    letter-spacing: 0.1em;
     font-weight: 800;
     margin: 0px;
 }
+.section h2
+{
+    color: var(--text);
+    font-size: calc( 1.2vw );;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    margin: 0px;
+}
+
+.section p, .section li
+{
+    color: var(--lighttext);
+    font-size: calc( 1vw );
+    letter-spacing: 0.1em;
+    margin-top: 1em;
+}
+
+.section .img
+{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+hr
+{
+    border: none;
+    border-bottom: 1px solid var(--text);
+}
+
+.card
+{
+    width: 100%;
+    background-color: var(--mainbg);
+    transition: 0.2s;
+}
+
+.card:hover
+{
+    transform: scale( 1.03 );
+    cursor: pointer;
+}
+
+.card .img
+{
+    width:100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.card h1
+{
+    margin: 0;
+    font-size: 11px;
+    color: var(--lighttext);
+    letter-spacing: 0.2em;
+    font-weight: 800;
+    padding: 15px 20px;
+}
+
+label
+{
+    color: var(--text); 
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
 
 
+label::after
+{
+    content: "*";
+    color: red;
+    padding-left: 5px;
+    display: inline-block;
+    transform: translateY(4px);
+    font-size: 20px;
+}
+
+input
+{
+    font-family: "Raleway";
+    background-color: transparent;
+    color: var(--text);
+    padding: 10px 10px;
+    border: 1px solid var(--texta);
+    margin: 10px 0px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    outline: none;
+    width: 100%;
+}
+
+input:focus
+{
+    border-color:var(--text)
+}
+
+input::placeholder
+{
+    color: var(--lighttext);
+    opacity: 0.8;
+}
 
 
 footer

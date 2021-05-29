@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +7,14 @@
     <title>National American Woman's Suffrage Association</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class = "">
+<body class = "dark">
     <div class = "nav">
         <div class = "left">
             <a id = logo>NAWSA</a>
             <a href = "#joinus">Join us</a>
         </div>
         <div class="right">
-            <a style = "float: right" onclick = " document.body.classList.toggle( 'dark' ); this.innerHTML = this.innerHTML === 'Dark Mode' ? 'Light Mode' : 'Dark Mode'; ">Dark Mode</a>
+            <a style = "float: right" onclick = " document.body.classList.toggle( 'dark' ); this.innerHTML = this.innerHTML === 'Dark Mode' ? 'Light Mode' : 'Dark Mode'; ">Light Mode</a>
         </div>
     </div>
     <div class = "wrapper">
@@ -27,6 +27,12 @@
                 <p>The National American Woman's Suffrage Association</p>
             </div>
             <hr>
+            <br>
+            <br>
+            <div class = "card">
+                <div class = "img" style = "background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/57/National_American_Woman_Suffrage_Association.jpg');"></div>
+                <h1>Our History</h1>
+            </div>
         </div>
 
 
@@ -35,9 +41,7 @@
             <div class = "title">
                 <div class = "left">
                     <span id = "helpus">HELP US</span>
-                    <h1>
-                        FIGHT FOR WOMEN'S SUFFRAGE
-                    </h1>
+                    <h1>FIGHT FOR WOMEN'S SUFFRAGE</h1>
                     <a href = "#joinus" class = "button">Join Now</a>
                 </div>
                 <img src = "fist.png">
@@ -45,7 +49,31 @@
 
             <div class = "section lightcolorbg" id = "joinus">
                 <h1>Join Us</h1>
-                <hr style = "border-color: white;">
+                <hr ><br><br>
+                <h2>What You Will Do As A Member</h2>
+                <p>
+                    <li>Work towards gaining suffrage for women</li>
+                    <li>Work with thousands of women</li>
+                    <li>Attend protests</li>
+                    <li>And More!</li>
+                </p><br><br>
+                <h2>Contact Information</h2><br>
+                <form>
+                    <label>First </label>
+                    <input placeholder="Jane"/>
+                    <label>First Name</label>
+                    <input placeholder="Doe"/>
+                    <label>Email</label>
+                    <input placeholder="janedoe@mail.com"/>
+                    <label>Phone</label>
+                    <input placeholder="(xxx) xxx-xxxx"/>
+                </form>
+            </div>
+
+            <div class = "section" id = "history">
+                <h1>Our History</h1>
+                <hr><br><br>
+                <div class = "img" style = "background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/5/57/National_American_Woman_Suffrage_Association.jpg' );"></div>
             </div>
         </div>
     </div>

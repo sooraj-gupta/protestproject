@@ -7,14 +7,18 @@
     <title>National American Woman's Suffrage Association</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class = "dark">
+<body >
     <div class = "nav">
         <div class = "left">
-            <a id = logo>NAWSA</a>
+            <a id = logo href = "index.html">NAWSA</a>
             <a href = "#joinus">Join us</a>
+            <a href = "#history">Our History</a>
+            <a href = "#beliefs">Our Beliefs</a>
+            <a href = "#goal">Our Goal</a>
+            <a href = "#whowewant">Who We Want</a>
         </div>
         <div class="right">
-            <a style = "float: right" onclick = " document.body.classList.toggle( 'dark' ); this.innerHTML = this.innerHTML === 'Dark Mode' ? 'Light Mode' : 'Dark Mode'; ">Light Mode</a>
+            <a style = "float: right" onclick = " document.body.classList.toggle( 'dark' ); this.innerHTML = this.innerHTML === 'Dark' ? 'Light' : 'Dark'; ">Dark</a>
         </div>
     </div>
     <div class = "wrapper">
@@ -34,6 +38,24 @@
                     <div class = "img" style = "background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/57/National_American_Woman_Suffrage_Association.jpg');"></div>
                     <h1>Our History</h1>
                 </a>
+            </div><br><br>
+            <div class = "card">
+                <a href = "#beliefs">
+                    <div class = "img" style = "background-image: url('https://blogs.lse.ac.uk/gender/files/2017/12/Foto-art%C3%ADculo-Sonia-small.jpg');"></div>
+                    <h1>Our Beliefs</h1>
+                </a>
+            </div><br><br>
+            <div class = "card">
+                <a href = "#goal">
+                    <div class = "img" style = "background-image: url('https://www.wvxu.org/sites/wvxu/files/styles/x_large/public/202001/trixie_crop.jpg');"></div>
+                    <h1>Our Goal</h1>
+                </a>
+            </div><br><br>
+            <div class = "card">
+                <a href = "#whowewant">
+                    <div class = "img" style = "background-image: url('https://i.redd.it/r0iv31sqd7t41.jpg');"></div>
+                    <h1>Who We Want</h1>
+                </a>
             </div>
         </div>
 
@@ -51,24 +73,26 @@
 
             <div class = "section lightcolorbg" id = "joinus">
                 <h1>Join Us</h1>
-                <hr ><br><br>
+                <hr >
                 <h2>What You Will Do As A Member</h2>
                 <p>
                     <li>Work towards gaining suffrage for women</li>
                     <li>Work with thousands of women</li>
                     <li>Attend protests</li>
                     <li>And More!</li>
-                </p><br><br>
+                </p>
                 <h2>Contact Information</h2><br>
-                <form>
+                <form method = "GET" >
                     <label>First </label>
-                    <input placeholder="Jane"/>
+                    <input placeholder="Jane" required/>
                     <label>First Name</label>
-                    <input placeholder="Doe"/>
+                    <input placeholder="Doe"required />
                     <label>Email</label>
-                    <input placeholder="janedoe@mail.com"/>
+                    <input placeholder="janedoe@mail.com" required/>
                     <label>Phone</label>
-                    <input placeholder="(xxx) xxx-xxxx"/>
+                    <input placeholder="(xxx) xxx-xxxx" required />
+                    <br><br>
+                    <button class = "button inverted" type = "submit">Submit</button>
                 </form>
             </div>
 
@@ -78,8 +102,40 @@
                 <div class = "img" style = "background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/5/57/National_American_Woman_Suffrage_Association.jpg' );"></div>
                 <br>
                 <p style="text-transform:none">The two competing national suffrage organizations before us were the NWSA and AWSA. They lasted over two decades. Suffragists worked to mend the split from the start, but were unsuccessful. Alice Stone Blackwell, the daughter of the American association leader Lucy Stone, spearheaded successful negotiations to merge the two groups in 1890. </p>
-                <p style="text-transform:none">After the combination of the two groups, the NWSA and AWSA to create this organization, NAWSA, we quickly got to work. After a decades-long fight we were able to gain significant traction and support by 1920. After World War 1 had ended, the President Wilson saw the amount of support and decided to proceed with passing the amendment.</p> 
-                <p style="text-transform:none">After having gained suffrage for women voters we now believe that it is time to change our goals and advance further. Our new goal is to spread the idea of not only voters rights for women, but also push for overall equality</p>
+                <p style="text-transform:none">After the combination of the two groups, the NWSA and AWSA to create this organization, NAWSA, we quickly got to work. </p> 
+                <p style="text-transform:none">Our goal as an organization is to convince not only the men and women around us that it is our obligation to fight for women's suffrage, but we need to also convince those of higher power to create the change that we are pushing for, which is the right for women to vote in this democratic nation</p>
+            </div>
+            
+            <div class = "section lightcolorbg" id = "beliefs">
+                <h1>Our Beliefs</h1>
+                <hr><br><br>
+                <div class = "img" style = "background-image: url( 'https://blogs.lse.ac.uk/gender/files/2017/12/Foto-art%C3%ADculo-Sonia-small.jpg' );"></div>
+                <br>
+                <h2>As pushers for equality we believe in one idea and it is very simple</h2>
+                <p style="text-transform:none"> Men and women are equal. The ideals we stand for in NAWSA aren’t solely to put women on a pedestal higher than men, it is to raise women to the same level that men are at. This would mean equal treatment for both men and women. This starts with the most prominent right that men have but not women. The right to vote. This leads into the overall goals of our organization, NAWSA</p>
+                
+            </div>
+
+            <div class = "section" id = "goal">
+                <h1>Our Goal</h1>
+                <hr><br><br>
+                <div class = "img" style = "background-image: url( 'https://www.wvxu.org/sites/wvxu/files/styles/x_large/public/202001/trixie_crop.jpg' );"></div>
+                <br>
+                <h2>Our goal as an organization is to:</h2>
+                <p style="text-transform:none">Convince not only the men and women around us that it is our obligation to fight for women's suffrage, but we need to also convince those of higher power to create the change that we are pushing for, which is the right for women to vote in this democratic nation
+                </p>
+                
+            </div>
+
+            <div class = "section opposite" id = "whowewant">
+                <h1>Who We Want</h1>
+                <hr><br><br>
+                <div class = "img" style = "background-image: url( 'https://i.redd.it/r0iv31sqd7t41.jpg' );"></div>
+                <br>
+                <p style="text-transform:none">If you agree with the idea that women should have the right to vote in this country, I, Carrie Chapman Catt, president of the NAWSA organization, personally welcome you to join me and the rest of the NAWSA organization! If you stand for this right you have a place to fight alongside us in this battle for women’s suffrage.
+                </p>
+                <a class = "button" href = "#joinus">Join Us</a>
+                
             </div>
         </div>
     </div>

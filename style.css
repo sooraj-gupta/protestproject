@@ -87,7 +87,8 @@ body,html
 }
 html
 {
-    background-color: #111;
+    --buttonradius: 2px;
+    /* background-color: #111; */
 }
 
 .nav
@@ -99,9 +100,13 @@ html
     display: flex;
     align-items: center;
 }
-.nav .left, .nav .right
+.nav .left
 {
     width: 100%;
+}
+.nav .right
+{
+    width: 10%;
 }
 .nav a
 {
@@ -109,8 +114,8 @@ html
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 0px 40px;
-    letter-spacing: 0.25em;
+    padding: 0px 24px;
+    letter-spacing: 0.2em;
     border-right: 1px solid var(--borderlight);
     font-size: 12px;
     text-decoration: none;
@@ -165,14 +170,14 @@ html
     line-height: 1.5em;
     width: 100%;
     margin: 0;
-    font-size: calc( 4.5vw - 20px  );
+    font-size: 45px;
     color: var(--lighttext);
 }
 .sidebar .title p
 {
-    font-weight: 100;
+    font-weight: 200;
     font-size: 15px;
-    font-size: calc( 1vw  );
+    font-size: 12px;
     padding-bottom: 30px;;
 }
 hr
@@ -185,10 +190,9 @@ hr
 {
     box-sizing: border-box;
     flex-basis: 80vw;
-    border: 1px solid var(--borderlight);
     border-radius: 5px;
     min-height: 100vh;
-    background-color: var(--mainbg);
+    background-color: transparent;
     z-index: 0;
 }
 
@@ -201,14 +205,17 @@ hr
     width: 100%;    
     margin: 0;
     /* height: 80vh; */
+    /* z-index: -2; */
+    background-color: var(--mainbg);
+    border: 1px solid var(--borderlight);
 }
 .main .title img
 {
     max-width: 40%;
     flex-basis: 40%;;
     align-self: flex-end;
-    animation: bob 2s 0s infinite;
-    z-index: -1;
+    /* animation: bob 2s 0s infinite; */
+    /* z-index: -1; */
 }
 
 .main .title h1
@@ -219,7 +226,7 @@ hr
     line-height: 1.2em;
     margin: 0;
     margin-bottom: 2vw;
-    font-size: calc( 5vw - 20px );;
+    font-size: calc( 2vw + 30px );
     color: var(--lighttext);
 }
 
@@ -235,7 +242,7 @@ hr
     display: inline-block;
     position: relative;
     letter-spacing: 0.2em;
-    font-size: calc( 1vw);
+    font-size: calc( 0.2vw + 10px );
     margin-bottom: 15px;
     transition: 0s;
 }
@@ -263,28 +270,53 @@ hr
 }
 
 
+.section
+{
+    border: 1px solid var(--borderlight);
+    margin-top: 80px;
+    border-radius: 10px;
+    background-color: var(--mainbg);
+}
+
 .section.lightcolorbg
 {
-    margin: 0;
+    /* margin: 0; */
     background-color: var(--colorlight);
+
+}
+
+.section.opposite
+{
+    /* margin: 0; */
+    background-color: var(--text);
     border-top: 1px solid var(--colorlight);
+}
+.section.opposite *
+{
+    color: var(--mainbg);
+    border-color: var(--mainbg);
 }
 
 .button
 {
     display: inline-block;
     background-color: transparent;
-    padding: 18px 30px;
+    padding: 1.2em 2.1em;
     border: 1px solid var(--colorlight);
-    font-size: 12px;
+    font-size: calc( 0.5vw + 5px );
     font-weight: 600;
     letter-spacing: 0.2em;
-    border-radius: 50px;
+    border-radius: var(--buttonradius);
     text-transform: uppercase;
     transition: border 0.3s;
     position: relative;
     text-decoration: none;
     color: var(--text);
+    font-family: 'Raleway';
+}
+.button.inverted
+{
+    border-color: var(--colordark);
 }
 .button::before
 {
@@ -296,7 +328,7 @@ hr
     height: 100%;
     top: 50%;
     left: 50%;
-    border-radius: 50px;
+    border-radius: var(--buttonradius);
     opacity: 0;
     transition: width 0.2s, border-radius 0.2s, background-color 0.2s, opacity 0.2s;
 }
@@ -305,10 +337,11 @@ hr
     cursor: pointer;
     border-color: var(--colordark); 
 }
+
 .button:hover::before
 {
     width: 100%;
-    border-radius: 50px;
+    border-radius: var(--buttonradius);
     background-color: var(--colordark);
     opacity: 0.2;
 }
@@ -326,18 +359,20 @@ hr
 .section h1
 {
     color: var(--text);
-    font-size: calc( 4vw - 20px );;
+    font-size: calc( 1vw + 20px );
     letter-spacing: 0.1em;
     font-weight: 800;
     margin: 0px;
 }
 .section h2
 {
+
     color: var(--text);
-    font-size: calc( 1.2vw );;
+    font-size: calc( 0.75vw + 5px );
     font-weight: 900;
     letter-spacing: 0.1em;
     margin: 0px;
+    margin-top: 2.75em;
 }
 
 .section p, .section li
@@ -349,7 +384,7 @@ hr
 }
 .section p
 {
-    font-weight: 200;
+    font-weight: 400;
 }
 
 .section .img
@@ -463,4 +498,25 @@ footer
 footer *
 {
     color: var(--lightest)
+}
+
+
+
+
+
+
+@media screen and ( max-width: 1000px )
+{
+    .wrapper
+    {
+        flex-direction: column;    
+    }
+    .card
+    {
+        display: none;
+    }
+    .sidebar
+    {
+        text-align: center;
+    }
 }

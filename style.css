@@ -347,6 +347,10 @@ hr
     letter-spacing: 0.1em;
     margin-top: 1em;
 }
+.section p
+{
+    font-weight: 200;
+}
 
 .section .img
 {
@@ -368,6 +372,10 @@ hr
     width: 100%;
     background-color: var(--mainbg);
     transition: 0.2s;
+}
+.card a
+{
+    text-decoration: none;
 }
 
 .card:hover
@@ -391,6 +399,7 @@ hr
     letter-spacing: 0.2em;
     font-weight: 800;
     padding: 15px 20px;
+    text-decoration: none;
 }
 
 label

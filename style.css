@@ -303,7 +303,7 @@ hr
     background-color: transparent;
     padding: 1.2em 2.1em;
     border: 1px solid var(--colorlight);
-    font-size: calc( 0.5vw + 5px );
+    font-size: calc( 0.2vw + 10px );
     font-weight: 600;
     letter-spacing: 0.2em;
     border-radius: var(--buttonradius);
@@ -368,7 +368,7 @@ hr
 {
 
     color: var(--text);
-    font-size: calc( 0.75vw + 5px );
+    font-size: calc( 0.2vw + 15px );
     font-weight: 900;
     letter-spacing: 0.1em;
     margin: 0px;
@@ -378,7 +378,7 @@ hr
 .section p, .section li
 {
     color: var(--lighttext);
-    font-size: calc( 1vw );
+    font-size: calc( 0.1vw + 12px );
     letter-spacing: 0.1em;
     margin-top: 1em;
 }
@@ -518,5 +518,47 @@ footer *
     .sidebar
     {
         text-align: center;
+        padding-right: 0px;
+        padding: 0px;
+    }
+    .nav .right 
+    {
+        display: none;
+    }
+    .nav .left
+    {
+        align-items: center;
+    }
+    .nav a
+    {
+        display: none;
+    }
+    #logo
+    {
+        width: 100%;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+
+    .main .title
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .title .left
+    {
+        flex-basis: 100%;;
+        margin: 80px 0px;
+    }
+    .main .title img
+    {
+        margin-top: 20px;
+    }
+    .section
+    {
+        padding-right: 30px;
+        padding-left: 30px;
     }
 }
